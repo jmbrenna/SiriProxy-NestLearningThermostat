@@ -17,7 +17,7 @@ class SiriProxy::Plugin::NestLearningThermostat < SiriProxy::Plugin
     end
     
     #capture thermostat status
-    listen_for /^(?:How do I|How can I|What can I|Do I|How I|How are you|Show the commands for|Show the commands to|What are the commands for) (?:control |do with |controlling |do at )?(?:the)? (?:thermostat|nest|next)/i do
+    listen_for /^(?:How do I|How can I|What can I|Do I|How I|How are you|Show the commands for|Show the commands to|What are the commands for) (?:control |do with |controlling |do at )?(?:the )?(?:thermostat|nest|next)/i do
     say "Here are the commands for controlling the Nest Thermostat:\n\nQuery the status of the Nest Thermostat:\n  \"What is the status of the thermostat\"\n\nSet the temperature of the Nest Thermostat:\n  \"Set thermostat to 75 degress\"",spoken: "Here are the commands for controlling the Nest Thermostat"
     request_completed
     end
